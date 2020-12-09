@@ -9,3 +9,6 @@ https://www.johnsmilga.com/projects
 https://github.com/Annie-Huang/react-projects
 
 ============================================================
+
+C:\react\react-projects\1-birthday-reminder>npm install
+
