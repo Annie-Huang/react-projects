@@ -12,3 +12,7 @@ https://github.com/Annie-Huang/react-projects
 
 C:\react\react-projects\1-birthday-reminder>npm install
 
+Highline:
+Project 2:
+- Good async and await function for fetch.
+- Very smart way to show "Read more" or "Show less" button
