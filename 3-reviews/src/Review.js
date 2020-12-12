@@ -8,11 +8,15 @@ const Review = () => {
   const {name, job, image, text} = people[index];
 
   const prevPerson = () => {
-    setIndex(index === 0 ? people.length-1 : index-1);
+    setIndex(() => {
+      return index === 0 ? people.length-1 : index-1;
+    } );
   }
 
   const nextPerson = () => {
-    setIndex(index === people.length-1 ? 0 : index+1);
+    setIndex(() => {
+      return index === people.length-1 ? 0 : index+1
+    });
   }
 
   return (
