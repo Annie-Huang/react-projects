@@ -16,3 +16,4 @@ Highline:
 Project 2:
 - Good async and await function for fetch.
 - Very smart way to show "Read more" or "Show less" button
+- Pass unrelated information as props to the same child
