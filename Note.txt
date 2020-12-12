@@ -9,11 +9,31 @@ https://www.johnsmilga.com/projects
 https://github.com/Annie-Huang/react-projects
 
 ============================================================
-
-C:\react\react-projects\1-birthday-reminder>npm install
-
 Highline:
 Project 2:
 - Good async and await function for fetch.
 - Very smart way to show "Read more" or "Show less" button
 - Pass unrelated information as props to the same child
+- Different between
+    - onClick={() => fetchTours()}
+    - onClick={fetchTours}
+    - onClick={fetchTours()}
+
+============================================================
+C:\react\react-projects\1-birthday-reminder>npm install
+
+
+
+
+onClick function
+=======================
+  if(tours.length === 0) {
+    return <main>
+        <button className='btn' onClick={() => fetchTours()}>Refresh</button>
+        <button className='btn' onClick={fetchTours}>Refresh</button>			<<< This one is the same as the first one, you can use this short cut to do the first one if it doesn't need to pass in parameter
+    </main>
+  }
+
+But this is different from
+	<button className='btn' onClick={fetchTours()}>Refresh</button>		<< If you got this one, fetchTour will be auto trigger (without the click) as soon as tours.length === 0.
+
