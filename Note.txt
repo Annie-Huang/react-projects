@@ -8,6 +8,9 @@ https://www.johnsmilga.com/projects
 
 https://github.com/Annie-Huang/react-projects
 
+https://react-icons.github.io/react-icons/
+https://react-icons.github.io/react-icons/icons?name=di  << search for github, e.g. FaGithubSquare is a font awesome icons. Then you go to the Font Awesome link below to see how to import it.
+https://react-icons.github.io/react-icons/icons?name=fa
 ============================================================
 Highline:
 Project 2:
@@ -36,4 +39,30 @@ onClick function
 
 But this is different from
 	<button className='btn' onClick={fetchTours()}>Refresh</button>		<< If you got this one, fetchTour will be auto trigger (without the click) as soon as tours.length === 0.
+
+
+react-icons
+==================
+import { FaGithubSquare } from "react-icons/fa";
+    <FaGithubSquare className='icon' />
+
+.icon {
+    font-size: 4rem;
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
