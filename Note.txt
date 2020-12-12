@@ -22,6 +22,11 @@ Project 2:
     - onClick={fetchTours}
     - onClick={fetchTours()}
 
+Project 3:
+- Do a function call within setIndex so the index will update to the correct value within the current cycle.
+- Math.floor((Math.random() * people.length)) to get a random number
+
+
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
 
