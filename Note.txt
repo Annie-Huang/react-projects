@@ -35,6 +35,8 @@ Project 5:
 Project 6:
 - Can do evaluation on class like: className={`job-btn ${index === value && 'active-btn'}`}
 
+Project 7:
+- Smart way to to circular looping through an array through useEffect, button clicks, and set activeSlide|lastSlide|nextSlide
 
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install

@@ -7,6 +7,19 @@ function App() {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    const lastIndex = people.length - 1;
+
+    // e.g. when on launch, prev button is clicked, index is set to -1. Then we reset it to be 3
+    // Very smart way to set the index on the button click to make it out of the range first.
+    if(index < 0) {
+      setIndex(lastIndex);
+    }
+    if(index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, people])
+
   return (
     <section className="section">
       <div className="title">
