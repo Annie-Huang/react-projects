@@ -17,6 +17,11 @@ function App() {
   }, [])
 
   const filterItems = (category) => {
+    if (category === 'all') {
+      setMenuItems(items);
+      return;
+    }
+
     // filter through original list, not the menuItems, which may have set to another list.
     const newItems = items.filter(item => item.category === category);
     setMenuItems(newItems);
