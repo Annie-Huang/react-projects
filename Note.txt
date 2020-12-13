@@ -29,6 +29,9 @@ Project 3:
 Project 4:
 - If statement in react better to do it as {showInfo && <p>{info}</p>} rather than {showInfo ? <p>{info}</p> : null }
 
+Project 5:
+- [...new Set(items.map(item => item.category))]; to get the distinct values from an array of objects
+
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
 
