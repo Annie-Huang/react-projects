@@ -14,9 +14,12 @@ https://react-icons.github.io/react-icons/icons?name=fa
 ============================================================
 Highline:
 Project 2:
-- Good async and await function for fetch.
-- Very smart way to show "Read more" or "Show less" button
+- Good async and await function for fetch in useEffect
+- Nice one on {readMore ? info : `${info.substring(0, 200)}...`}
 - Pass unrelated information as props to the same child
+    <Tour key={tour.id} {...tour} removeTour={removeTour} />
+    const Tour = ({id, image, info, price, name, removeTour}) => {..}
+    export default Tour;
 - Different between
     - onClick={() => fetchTours()}
     - onClick={fetchTours}
@@ -24,6 +27,9 @@ Project 2:
 
 Project 3:
 - Do a function call within setIndex so the index will update to the correct value within the current cycle.
+    setIndex(() => {
+      return index === people.length-1 ? 0 : index+1
+    });
 - Math.floor((Math.random() * people.length)) to get a random number
 
 Project 4:
@@ -37,6 +43,15 @@ Project 6:
 
 Project 7:
 - Smart way to to circular looping through an array through useEffect, button clicks, and set activeSlide|lastSlide|nextSlide
+- Smart way of doing setTimeout in useEffect
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 3000);
+    return () => clearInterval(slider);
+  }, [index])
+
+
 
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
