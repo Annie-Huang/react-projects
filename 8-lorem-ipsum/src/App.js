@@ -6,7 +6,11 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('hello world');
+    console.log(count);
+    console.log(typeof count);
+    let amount = parseInt(count); // change it to int
+    console.log(amount);
+
     setText(data);
   };
 
