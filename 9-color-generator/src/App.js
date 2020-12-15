@@ -11,8 +11,16 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(color);
-    let colors = new Values(color).all(10);
-    console.log(colors);
+
+    try {
+      // 10 means 10 lighter than current value and 10 darker than current value. So colors.length = 21;
+      // you can do 20 as well.
+      let colors = new Values(color).all(10); // e.g. #222
+      console.log(colors);
+    } catch (error) {
+      setError(true); // e.g. 222
+      console.log(error);
+    }
   };
 
   return (
