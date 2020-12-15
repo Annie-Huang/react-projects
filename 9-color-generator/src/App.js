@@ -43,7 +43,8 @@ function App() {
       </section>
       <section className='colors'>
         {list.map((color, index) => (
-          <SingleColor key={index} {...color} index={index} />
+          // For some reason cannot directly pass hex to the child.
+          <SingleColor key={index} {...color} index={index} hexColor={color.hex}/>
         ))}
       </section>
     </>

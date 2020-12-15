@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import rgbToHex from './utils';
 
-const SingleColor = ({ rgb, weight, index }) => {
+const SingleColor = ({ rgb, weight, index, hexColor }) => {
   const [] = useState(false);
   const bcg = rgb.join(',');
   console.log(bcg);
@@ -11,7 +11,8 @@ const SingleColor = ({ rgb, weight, index }) => {
   return (
     <article className={`color`} style={{ backgroundColor: `rgb(${bcg})` }}>
       <p className='percent-value'>{weight}%</p>
-      <p className='color-value'>{hex}</p>
+      {/* <p className='color-value'>{hex}</p> */}
+      <p className='color-value'>{hexColor}</p>
     </article>
   );
 };
