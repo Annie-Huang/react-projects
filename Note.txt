@@ -56,6 +56,10 @@ Project 7:
 Project 8:
 - Simple form of a input field and a submit button
 
+Project 9:
+- Simple form of a input field and a submit button
+- Manually copy text on element clicks
+
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
 
