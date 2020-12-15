@@ -1,8 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import rgbToHex from './utils'
+import React, { useState, useEffect } from 'react';
+import rgbToHex from './utils';
 
-const SingleColor = () => {
-  return <h4>single color</h4>
-}
+const SingleColor = ({ rgb, weight, index }) => {
+  const [] = useState(false);
+  const bcg = rgb.join(',');
+  console.log(bcg);
 
-export default SingleColor
+  return (
+    <article
+      className={`color`}
+      style={{ backgroundColor: `rgb(${bcg})` }}
+    ></article>
+  );
+};
+
+export default SingleColor;
