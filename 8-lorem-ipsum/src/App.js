@@ -6,12 +6,20 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(count);
+    console.log(count); // string display as black color in chrome dev tool
     console.log(typeof count);
     let amount = parseInt(count); // change it to int
-    console.log(amount);
+    console.log(amount); // number display as blue color in chrome dev tool
 
-    setText(data);
+    if (count <= 0) {
+      amount = 1;
+    }
+    // if count is 9, display [0, 8)
+    // Not sure why it choose 8, the data.js got 9 string, should be compare with 9.
+    if (count > 8) {
+      amount = 8;
+    }
+    setText(data.slice(0, amount));
   };
 
   return (
