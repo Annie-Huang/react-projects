@@ -6,6 +6,7 @@ import Values from 'values.js';
 function App() {
   const [color, setColor] = useState('');
   const [error, setError] = useState(false);
+
   // This is only setting the default list, not the color, so the place holder of the input will remain there.
   const [list, setList] = useState(new Values('#f15025').all(10));
 
@@ -14,8 +15,8 @@ function App() {
     console.log(color);
 
     try {
-      // 10 means 10 lighter than current value and 10 darker than current value. So colors.length = 21;
-      // you can do 20 as well.
+      // 10 means divide by 10, so there is 10 lighter than current value and 10 darker than current value. So colors.length = 21;
+      // you can do 20 as well, which means only 5 colors lighter|darker. and if use 1, that means there is 100 colors lighter|darker.
       let colors = new Values(color).all(10); // e.g. #222
       console.log(colors);
       setList(colors);
