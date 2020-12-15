@@ -68,6 +68,9 @@ Project 9:
     return () => clearTimeout(timeout);
   }, [alert]);
 
+Project 10:
+- Basically a todo list app.
+
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
 
