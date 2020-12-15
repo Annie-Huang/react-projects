@@ -14,6 +14,7 @@ https://react-icons.github.io/react-icons/icons?name=fa
 https://github.com/noeldelgado/values.js
 
 ============================================================
+
 Highline:
 Project 2:
 - Good async and await function for fetch in useEffect
@@ -66,7 +67,7 @@ Project 9:
     }, 3000);
     return () => clearTimeout(timeout);
   }, [alert]);
-  
+
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
 

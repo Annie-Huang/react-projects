@@ -6,7 +6,8 @@ import Values from 'values.js';
 function App() {
   const [color, setColor] = useState('');
   const [error, setError] = useState(false);
-  const [list, setList] = useState([]);
+  // This is only setting the default list, not the color, so the place holder of the input will remain there.
+  const [list, setList] = useState(new Values('#f15025').all(10));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -44,7 +45,12 @@ function App() {
       <section className='colors'>
         {list.map((color, index) => (
           // For some reason cannot directly pass hex to the child.
-          <SingleColor key={index} {...color} index={index} hexColor={color.hex}/>
+          <SingleColor
+            key={index}
+            {...color}
+            index={index}
+            hexColor={color.hex}
+          />
         ))}
       </section>
     </>
