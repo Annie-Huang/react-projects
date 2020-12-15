@@ -51,7 +51,8 @@ Project 7:
     return () => clearInterval(slider);
   }, [index])
 
-
+Project 8:
+- Simple form of a input field and a submit button
 
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
