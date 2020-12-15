@@ -11,6 +11,8 @@ https://github.com/Annie-Huang/react-projects
 https://react-icons.github.io/react-icons/
 https://react-icons.github.io/react-icons/icons?name=di  << search for github, e.g. FaGithubSquare is a font awesome icons. Then you go to the Font Awesome link below to see how to import it.
 https://react-icons.github.io/react-icons/icons?name=fa
+https://github.com/noeldelgado/values.js
+
 ============================================================
 Highline:
 Project 2:
