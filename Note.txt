@@ -45,7 +45,7 @@ Project 6:
 
 Project 7:
 - Smart way to to circular looping through an array through useEffect, button clicks, and set activeSlide|lastSlide|nextSlide
-- Smart way of doing setTimeout in useEffect
+- Smart way of doing setInterval in useEffect
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex(index + 1);
@@ -58,8 +58,15 @@ Project 8:
 
 Project 9:
 - Simple form of a input field and a submit button
-- Manually copy text on element clicks
-
+- DOM method to manually copy text on element clicks
+- Smart way of doing setTimeout in useEffect
+  useEffect(() => {
+    let timeout = setTimeout(() => {
+      setAlert(false);
+    }, 3000);
+    return () => clearTimeout(timeout);
+  }, [alert]);
+  
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
 
