@@ -10,10 +10,29 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('hello');
+    console.log(color);
   };
 
-  return <h2>color generator project</h2>;
+  return (
+    <>
+      <section className='container'>
+        <h3>color generator</h3>
+        <form onSubmit={handleSubmit}>
+          <input
+            type='text'
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+          />
+          <button type='submit' className='btn'>
+            submit
+          </button>
+        </form>
+      </section>
+      <section className='colors'>
+        <h4>list goes here</h4>
+      </section>
+    </>
+  );
 }
 
 export default App;
