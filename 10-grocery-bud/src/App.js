@@ -8,9 +8,9 @@ function App() {
   const [isEditing, setIsEditing] = useState(false);
   const [editID, setEditID] = useState(null);
   const [alert, setAlert] = useState({
-    show: true,
-    msg: 'hello world',
-    type: 'danger',
+    show: false,
+    msg: '',
+    type: '',
   }); // the object will contain color and text
 
   const handleSubmit = (e) => {
