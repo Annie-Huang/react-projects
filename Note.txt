@@ -69,7 +69,7 @@ Project 9:
   }, [alert]);
 
 Project 10:
-- Basically a todo list app.
+- Basically a todo list app with edit|delete|delete all function.
 - Another way to do form submit: put onSubmit in form tag rather than onClick of the button tag
       <form className='grocery-form' onSubmit={handleSubmit}>
           <input type='text' />
