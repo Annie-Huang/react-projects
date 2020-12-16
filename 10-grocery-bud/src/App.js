@@ -10,7 +10,7 @@ function App() {
   const [alert, setAlert] = useState({
     show: true,
     msg: 'hello world',
-    type: 'success',
+    type: 'danger',
   }); // the object will contain color and text
 
   const handleSubmit = (e) => {
