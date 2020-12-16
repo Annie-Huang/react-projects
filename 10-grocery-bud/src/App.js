@@ -11,7 +11,16 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('hello');
+    // console.log('hello');
+
+    if (!name) {
+      // display alert
+    } else if (name && isEditing) {
+      // I don't think it need the name value check, if it can get to here it is already true.
+      // deal with edit
+    } else {
+      // show alert
+    }
   };
 
   return (
