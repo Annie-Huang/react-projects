@@ -19,19 +19,20 @@ function App() {
 
     if (!name) {
       // display alert
-      showAlert(true, 'please enter value', 'danger');
+      showAlert(true, 'danger', 'please enter value');
     } else if (name && isEditing) {
       // I don't think it need the name value check, if it can get to here it is already true.
       // deal with edit
     } else {
       // show alert
+      showAlert(true, 'success', 'item added to the list');
       const newItem = { id: new Date().getTime().toString(), title: name };
       setList([...list, newItem]);
       setName('');
     }
   };
 
-  const showAlert = (show = false, msg = '', type = '') => {
+  const showAlert = (show = false, type = '', msg = '') => {
     setAlert({ show, msg, type });
   };
 
