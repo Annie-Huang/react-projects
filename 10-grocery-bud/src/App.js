@@ -23,6 +23,19 @@ function App() {
     } else if (name && isEditing) {
       // I don't think it need the name value check, if it can get to here it is already true.
       // deal with edit
+      setList(
+        list.map((item) => {
+          return item.id === editID ? { ...item, title: name } : item;
+        })
+      );
+
+      // reset state.
+      setName('');
+      setIsEditing(false);
+      setEditID(null);
+
+      // Show alert when everything is success:
+      showAlert(true, 'success', 'value changed');
     } else {
       // show alert
       showAlert(true, 'success', 'item added to the list');
@@ -46,6 +59,13 @@ function App() {
     setList(list.filter((item) => item.id !== id));
   };
 
+  const editItem = (id) => {
+    const specificItem = list.filter((item) => item.id === id)[0];
+    setName(specificItem.title);
+    setIsEditing(true);
+    setEditID(id);
+  };
+
   return (
     <section className='section-center'>
       <form className='grocery-form' onSubmit={handleSubmit}>
@@ -66,7 +86,7 @@ function App() {
       </form>
       {list.length > 0 && (
         <div className='grocery-container'>
-          <List items={list} removeItem={removeItem} />
+          <List items={list} removeItem={removeItem} editItem={editItem} />
           <button className='clear-btn' onClick={clearList}>
             clear items
           </button>
