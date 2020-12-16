@@ -70,6 +70,13 @@ Project 9:
 
 Project 10:
 - Basically a todo list app.
+- Another way to do form submit: put onSubmit in form tag rather than onClick of the button tag
+      <form className='grocery-form' onSubmit={handleSubmit}>
+          <input type='text' />
+          <button type='submit' className='submit-btn'>
+            {isEditing ? 'edit' : 'submit'}
+          </button>
+      </form>
 
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
