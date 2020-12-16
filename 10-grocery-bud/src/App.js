@@ -19,6 +19,7 @@ function App() {
 
     if (!name) {
       // display alert
+      showAlert(true, 'please enter value', 'danger');
     } else if (name && isEditing) {
       // I don't think it need the name value check, if it can get to here it is already true.
       // deal with edit
@@ -28,6 +29,10 @@ function App() {
       setList([...list, newItem]);
       setName('');
     }
+  };
+
+  const showAlert = (show = false, msg = '', type = '') => {
+    setAlert({ show, msg, type });
   };
 
   return (
