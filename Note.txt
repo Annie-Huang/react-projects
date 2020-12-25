@@ -79,6 +79,9 @@ Project 10:
       </form>
 - Very good way to useEffect to clear out alert after 3 seconds and clear out setTimeout as well
 
+Project 11:
+- If you use {varA && <Component></Component>}, you cannot add animation for open and collapse because it's mount|unmount element.
+
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
 
