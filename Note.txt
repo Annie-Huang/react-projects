@@ -81,7 +81,8 @@ Project 10:
 
 Project 11:
 - If you use {showLinks && <Component></Component>}, you cannot add animation for open and collapse because it's mount|unmount element.
-  Solution is always keep element there but use css to control the display:
+  Solution is always keep element there but use css to control the display.
+  method1:
   <Component className={`${showLinks ? 'show-container' : ''} links-container`}></Component>
   .links-container {
     height: 0;
@@ -90,6 +91,24 @@ Project 11:
   }
   .show-container {
     height: 10rem;
+  }
+  method2:
+    useEffect(() => {
+      const linksHeight = linksRef.current.getBoundingClientRect().height;
+      if (showLinks) {
+        linksContainerRef.current.style.height = `${linksHeight}px`;
+      } else {
+        linksContainerRef.current.style.height = '0px';
+      }
+    }, [showLinks]);
+    <Component className='links-container' ref={linksContainerRef}>
+      <ul className='links' ref={linksRef}>
+    </Component>
+  But very important to do this, otherwise in desktop, if it's already 0px in mobile, the container will keep disappear when resizing.
+  @media screen and (min-width: 800px) {
+    .links-container {
+        height: auto !important;
+    }
   }
 
 
