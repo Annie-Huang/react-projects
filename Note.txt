@@ -111,6 +111,8 @@ Project 11:
     }
   }
 
+Project 12:
+- Good explanation on how to use useContext
 
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
