@@ -113,6 +113,7 @@ Project 11:
 
 Project 12:
 - Good explanation on how to use useContext
+- Can only use the react hook in a component or in a custom hook.
 
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
