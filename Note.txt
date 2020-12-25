@@ -80,7 +80,18 @@ Project 10:
 - Very good way to useEffect to clear out alert after 3 seconds and clear out setTimeout as well
 
 Project 11:
-- If you use {varA && <Component></Component>}, you cannot add animation for open and collapse because it's mount|unmount element.
+- If you use {showLinks && <Component></Component>}, you cannot add animation for open and collapse because it's mount|unmount element.
+  Solution is always keep element there but use css to control the display:
+  <Component className={`${showLinks ? 'show-container' : ''} links-container`}></Component>
+  .links-container {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  .show-container {
+    height: 10rem;
+  }
+
 
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
