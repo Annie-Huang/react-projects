@@ -19,7 +19,11 @@ const Navbar = () => {
           <li>
             {/* The button text need to match the page value of sublinks in data.js */}
             <button className='link-btn'>products</button>
+          </li>
+          <li>
             <button className='link-btn'>developers</button>
+          </li>
+          <li>
             <button className='link-btn'>company</button>
           </li>
         </ul>
