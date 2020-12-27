@@ -117,7 +117,10 @@ Project 12:
 
 Project 13:
 - Good useRef example.
+- Good example of how to calculate the middle position of the menu button and calculate the width required for the submenu container.
 
+Project 14:
+- Example to use useReducer and useContext for global store in AppContext.
 ============================================================
 C:\react\react-projects\1-birthday-reminder>npm install
 
