@@ -2,10 +2,7 @@ import cartItems from './data';
 
 const reducer = (state, action) => {
   if (action.type === 'CLEAR_CART') {
-    return {
-      ...state,
-      cart: [],
-    };
+    return { ...state, cart: [] };
   }
   if (action.type === 'REMOVE') {
     return {
@@ -20,11 +17,7 @@ const reducer = (state, action) => {
       }
       return cartItem;
     });
-
-    return {
-      ...state,
-      cart: tempCart,
-    };
+    return { ...state, cart: tempCart };
   }
   if (action.type === 'DECREASE') {
     let tempCart = state.cart.map((cartItem) => {
@@ -33,11 +26,7 @@ const reducer = (state, action) => {
       }
       return cartItem;
     });
-
-    return {
-      ...state,
-      cart: tempCart,
-    };
+    return { ...state, cart: tempCart };
   }
   return state;
 };
