@@ -125,7 +125,7 @@ Project 14:
 - Use async|await to fetch data on page load (useEffect) and dispatch action to assign result to state.
 
 Project 15:
-- Routing.
+- Routing, Navbar and Links
 ==========================================================================
 C:\react\react-projects\1-birthday-reminder>npm install
 
