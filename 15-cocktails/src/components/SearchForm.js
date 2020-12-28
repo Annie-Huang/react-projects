@@ -9,6 +9,11 @@ const SearchForm = () => {
     setSearchTerm(searchValue.current.value);
   };
 
+  // set focus on input on pageload (useEffect, useRef)
+  React.useEffect(() => {
+    searchValue.current.focus();
+  }, []);
+
   return (
     <section className='section search'>
       <form className='search-form'>

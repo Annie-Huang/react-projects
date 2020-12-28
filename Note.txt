@@ -129,6 +129,7 @@ Project 14:
 Project 15:
 - Routing, Navbar and Links
 - Simple form with one <input> with useRef to trigger AppContext method onChange
+- set focus on input on pageload (useEffect, useRef)
 ==========================================================================
 C:\react\react-projects\1-birthday-reminder>npm install
 
