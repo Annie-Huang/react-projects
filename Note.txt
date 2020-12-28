@@ -122,6 +122,7 @@ Project 13:
 Project 14:
 - Example to use useReducer and useContext for global store in AppContext.
 - For value that can be driven from the current state value, use the useEffect to watch the state to call dispatch to update other state.
+- Use async|await to fetch data on page load (useEffect) and dispatch action to assign result to state.
 
 ==========================================================================
 C:\react\react-projects\1-birthday-reminder>npm install
