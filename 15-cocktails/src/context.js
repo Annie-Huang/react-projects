@@ -9,7 +9,13 @@ const AppProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState('a');
   const [cocktails, setCocktails] = useState([]);
 
-  const fetchDrinks = async () => {
+  /*
+   Atm you will get warning of "React Hook useEffect has a missing dependency: 'fetchDrinks'. Either include it or remove the dependency array  react-hooks/exhaustive-deps"
+   That is because the fetchDrinks got 'setXXX' method inside. In order to avoid the warning. Wrapped the fetchDrinks with useCalleddback function.
+   It means we will only reconstruct the fetchDrinks function if the searchTerm (because it's used in the url) has changed.
+   */
+  // const fetchDrinks = async () => {
+  const fetchDrinks = useCallback(async () => {
     setLoading(true);
 
     try {
@@ -45,11 +51,11 @@ const AppProvider = ({ children }) => {
       console.log(error);
       setLoading(false);
     }
-  };
+  }, [searchTerm]);
 
   useEffect(() => {
     fetchDrinks();
-  }, [searchTerm]); // whenever the searchTerm changes, fetch from API again.
+  }, [searchTerm, fetchDrinks]); // whenever the searchTerm changes, fetch from API again.
 
   return (
     <AppContext.Provider

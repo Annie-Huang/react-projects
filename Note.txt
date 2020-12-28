@@ -130,6 +130,7 @@ Project 15:
 - Routing, Navbar and Links
 - Simple form with one <input> with useRef to trigger AppContext method onChange
 - focus on pageload (useEffect, useRef)
+- avoid "React Hook useEffect has a missing dependency" by using useCallback.
 ==========================================================================
 C:\react\react-projects\1-birthday-reminder>npm install
 
